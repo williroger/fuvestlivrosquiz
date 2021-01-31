@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+import Head from 'next/head';
+import React from 'react';
+
 import db from '../db.json';
 import Widget from '../src/components/Widget/index';
 import Footer from '../src/components/Footer';
@@ -26,27 +29,35 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-  <QuizBackground backgroundImage={db.bg}>
-    <QuizContainer>
-      <Widget>
-        <Widget.Header>
+    <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Quiz Fuvest Livros</title>
+      </Head>
+      <QuizContainer>
+        <QuizLogo />
+        <Widget>
+          <Widget.Header>
             <h1>Livros FUVEST</h1>
           </Widget.Header>
-        <Widget.Content>
-            <h1>Livros FUVEST</h1>
-            <p>Leituras obrigatórias para o vestibular da FUVEST 2021</p>
-        </Widget.Content>
-      </Widget>
-        
+          <Widget.Content>
+            <form onSubmit="">
+              <input placeholder="Digite seu nome para jogar :)" />
+              <button type="submit">
+                Jogar [seuNome]
+              </button>
+            </form>
+          </Widget.Content>
+        </Widget>
+
         <Widget>
-        <Widget.Content> 
+          <Widget.Content>
             <h1>Quiz da Galera</h1>
             <p>Loren Loren Loren Loren Loren</p>
-        </Widget.Content>
+          </Widget.Content>
         </Widget>
         <Footer />
-    </QuizContainer>
-    <GitHubCorner projectUrl="https://github.com/williroger" />
-  </QuizBackground>
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/williroger" />
+    </QuizBackground>
   );
 }
