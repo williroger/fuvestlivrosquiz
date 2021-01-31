@@ -55,7 +55,7 @@ export default function Home() {
               console.log('Fazendo uma submit ');
             }}
             >
-              <Input 
+              <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                   // State
