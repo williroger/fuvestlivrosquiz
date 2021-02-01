@@ -1,10 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/api/db": "pages/api/db.js",
-  "/contribuidores": "pages/contribuidores.js",
-  "/": "pages/index.js",
-  "/quiz/[id]": "pages/quiz/[id].js",
-  "/quiz": "pages/quiz.js",
   "/_error": "pages/_error.js"
 }
